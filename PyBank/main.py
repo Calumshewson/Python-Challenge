@@ -2,6 +2,7 @@
 import csv
 import os
 
+#Print a header
 print("Financial Analysis")
 
 print("---------------------------------------------------------------------------------------------------------------")
@@ -10,7 +11,7 @@ print("-------------------------------------------------------------------------
 budget_csv = os.path.join(".", "Resources", "budget_data.csv")
 output_file = os.path.join(".", "Analysis", "financial_analysis.txt")
 
-#Initialize staring variables
+#Initialize starting variables
 total_months = 0
 total_sum = 0
 total_change = 0
@@ -31,7 +32,7 @@ with open(budget_csv) as csv_file:
         profit_loss = int(row[1])
         total_sum += profit_loss
 
-        #Calculate Average Change
+        #Calculate Change between each month as it loops through the data
         if previous_profit_loss is not None:
             change = profit_loss - previous_profit_loss
             total_change += change
@@ -46,10 +47,10 @@ with open(budget_csv) as csv_file:
 
         previous_profit_loss = profit_loss
 
-        
-
+#Calculate Average Change
 average_change = total_change/(total_months - 1)
 
+#Print results
 print("Total Months: ",total_months)
 print("Total: $",total_sum)
 print("Average Change: $",average_change)
