@@ -57,7 +57,7 @@ print("Average Change: $",average_change)
 print("Greatest Increase in Profits: ", increase_month, " ($",greatest_increase, ")")
 print("Greatest Decrease in Profits: ", decrease_month, " ($",greatest_decrease, ")")
 
-# Export the results to a text file
+#Export the results to a text file
 with open(output_file, "w") as file:
     file.write("Financial Analysis\n")
     file.write("---------------------------------------------------------------------------------------------------------------\n")
