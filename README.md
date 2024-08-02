@@ -9,3 +9,5 @@ The code tallies up the total votes.
 It also sifts through to identify each candidate with votes, and tallies up their individual votes.
 Finally it calculates the percentage of votes for each candidate and then based off the candidate with the most votes it finds the winner.
 Once again, it also displays the results in a seperate .txt file
+
+Lastly, I messed up with the commit messages, I am still new to github
